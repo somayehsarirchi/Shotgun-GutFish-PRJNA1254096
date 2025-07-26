@@ -83,9 +83,9 @@ Output will be stored in `/results`.
 
 If you use this workflow or any component, please cite:
 
-> Sarirchi, Somayeh. Shotgun metagenomic profiling of fish gut microbiota (PRJNA1254096). GitHub repository. Zenodo DOI: [Pending]
+> Sarirchi, Somayeh. (2025). *Shotgun metagenomic profiling of fish gut microbiota (PRJNA1254096)*. Zenodo. [https://doi.org/10.5281/zenodo.16447049](https://doi.org/10.5281/zenodo.16447049)
 
-And also the original dataset:
+Also cite the original dataset:
 
 > Shotgun metagenomics analysis of gut microbiota of three indigenous fish species from the Kizil River, Xinjiang (PRJNA1254096)
 
@@ -102,3 +102,9 @@ ORCID: [0000-0002-2964-8447](https://orcid.org/0000-0002-2964-8447)
 
 - This is a public reference project for freelance bioinformatics clients and educational purposes.
 - Functional network and ARG analysis are possible in follow-up phases.
+
+---
+
+## 🔗 DOI
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16447049.svg)](https://doi.org/10.5281/zenodo.16447049)
