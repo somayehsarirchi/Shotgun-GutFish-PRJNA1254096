@@ -6,12 +6,13 @@ Shotgun metagenomic profiling of fish gut microbiota using Kraken2, Bracken, and
 
 ## 📘 Project Overview
 
-This project presents a complete workflow for shotgun metagenomic analysis of fish gut microbiota based on a sample (SRR33249106) from [BioProject PRJNA1254096](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1254096). The sample corresponds to *Schizothorax biddulphi*, a native fish species from the Kizil River (Xinjiang), and was analyzed using:
+This project presents a complete workflow for shotgun metagenomic analysis of fish gut microbiota based on a sample (SRR33249106) from [BioProject PRJNA1254096](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1254096).  
+The sample corresponds to *Schizothorax biddulphi*, a native fish species from the Kizil River (Xinjiang), and was analyzed using:
 
-- Host decontamination with Kneaddata  
-- Taxonomic classification with **Kraken2** and **Bracken**  
-- Functional profiling using **eggNOG-mapper**  
-- Visualization with **R**, **Krona**, and custom plots  
+- Host decontamination with **Kneaddata**
+- Taxonomic classification with **Kraken2** and **Bracken**
+- Functional profiling using **eggNOG-mapper**
+- Visualization with **R**, **Krona**, and custom barplots
 
 ---
 
@@ -29,7 +30,7 @@ This project presents a complete workflow for shotgun metagenomic analysis of fi
 
 ### 3. Functional Profiling
 - Protein-coding genes annotated using **eggNOG-mapper**
-- Top functional categories extracted and visualized.
+- Top KEGG orthologs and pathways extracted and visualized in R
 
 ---
 
@@ -37,43 +38,54 @@ This project presents a complete workflow for shotgun metagenomic analysis of fi
 
 
 Shotgun-GutFish-PRJNA1254096/
-├── data/ # Bracken output, raw tables
-├── results/ # Final plots, PDF summaries, Krona HTML
-├── figures/ # Screenshots of visualizations
-├── scripts/ # Python & shell scripts used in the workflow
-└── README.md # Project documentation
+├── data/ # Bracken output, annotations, top species list
+├── results/ # Final visualizations (PDFs, HTML)
+├── scripts/ # Analysis scripts (R, Python, Shell)
+├── LICENSE
+├── CITATION.cff
+└── README.md
 
 
 ---
 
 ## 📊 Results Preview
 
-### 🧬 Krona Plot (Taxonomic Tree)
-![Krona Screenshot](figures/screenshot_krona.png)
-
-### 📈 Top 10 Species
-![Top10 Species](results/Top10.pdf)
-
-### 🧠 Top KEGG Pathways
-![KEGG](results/Top10-KEGG-Pathways.pdf)
+- 📄 [`Top10.pdf`](results/Top10.pdf): Top 10 abundant species (barplot)
+- 📄 [`Top10-KEGG-Pathways.pdf`](results/Top10-KEGG-Pathways.pdf): Top KEGG pathways
+- 📄 [`Top10-Orthologs.pdf`](results/Top10-Orthologs.pdf): Top KEGG orthologs
+- 📄 [`10FunctionalTerms.pdf`](results/10FunctionalTerms.pdf): Functional annotation summary
+- 🌐 [`FishSample06_dualclean_krona_named.html`](results/FishSample06_dualclean_krona_named.html): Interactive Krona plot
 
 ---
 
-## 🔧 Tools Used
+## 🔧 Tools & Versions
 
-| Step | Tool |
-|------|------|
-| Read QC | FastQC |
-| Host decontamination | Kneaddata |
-| Taxonomic classification | Kraken2 + Bracken |
-| Visualization | R, KronaTools |
-| Functional annotation | eggNOG-mapper |
+| Step | Tool | Version |
+|------|------|---------|
+| Quality Control | FastQC | 0.11.9 |
+| Host decontamination | Kneaddata | 0.10.0 |
+| Taxonomy | Kraken2 + Bracken | Kraken2 v2.1.2, Bracken v2.6.2 |
+| Annotation | eggNOG-mapper | 2.1.9 |
+| Visualization | R | 4.3.1 |
+| Plotting | ggplot2, pheatmap, dplyr, tidyr | latest CRAN |
+
+---
+
+## ▶️ How to Reproduce
+
+See [`scripts/00_workflow_summary.sh`](scripts/00_workflow_summary.sh) for the overview of all steps.  
+Each R/Python script is self-contained and assumes input from the `/data` folder.  
+Output will be stored in `/results`.
 
 ---
 
 ## 📜 Citation & Reference
 
-If you use this workflow or parts of it, please cite the original study:
+If you use this workflow or any component, please cite:
+
+> Sarirchi, Somayeh. Shotgun metagenomic profiling of fish gut microbiota (PRJNA1254096). GitHub repository. Zenodo DOI: [Pending]
+
+And also the original dataset:
 
 > Shotgun metagenomics analysis of gut microbiota of three indigenous fish species from the Kizil River, Xinjiang (PRJNA1254096)
 
@@ -82,15 +94,11 @@ If you use this workflow or parts of it, please cite the original study:
 ## 🙋 Contact
 
 Project by [Somayeh Sarirchi](https://github.com/somayehsarirchi)  
-Feel free to open an issue or reach out for collaboration.
+ORCID: [0000-0002-2964-8447](https://orcid.org/0000-0002-2964-8447)
 
 ---
 
 ## 📌 Notes
 
-- This project is a sample template for microbial profiling using public metagenomic data.
-- Some steps (e.g., DeepARG, functional network mapping) can be added in follow-up phases.
-
-
-
-
+- This is a public reference project for freelance bioinformatics clients and educational purposes.
+- Functional network and ARG analysis are possible in follow-up phases.
