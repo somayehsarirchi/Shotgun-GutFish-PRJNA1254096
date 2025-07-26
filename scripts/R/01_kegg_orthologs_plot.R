@@ -1,3 +1,9 @@
+#!/usr/bin/env Rscript
+# Script: 01_kegg_orthologs_plot.R
+# Author: Somayeh Sarirchi
+# Description: This script reads eggNOG annotation data, extracts the top 10 KEGG Orthologs (KO),
+#              joins them with descriptions, and visualizes their counts using a horizontal barplot.
+
 # Load required libraries
 library(tidyverse)
 
