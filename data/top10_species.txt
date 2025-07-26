@@ -1,0 +1,11 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Escherichia coli	562	S	571	2282	2853	0.42844
+Klebsiella michiganensis	1134687	S	23	223	246	0.03694
+Pseudomonas aeruginosa	287	S	14	112	126	0.01892
+Acinetobacter lwoffii	28090	S	23	42	65	0.00976
+Moraxella osloensis	34062	S	11	0	11	0.00165
+Pasteurella multocida	747	S	14	11	25	0.00375
+Methylobacterium sp. FF17	2984843	S	14	5	19	0.00285
+Delftia acidovorans	80866	S	11	12	23	0.00345
+Blautia wexlerae	418240	S	276	96	372	0.05586
+Blautia obeum	40520	S	133	47	180	0.02703
