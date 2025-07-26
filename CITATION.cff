@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below:"
+title: "Shotgun metagenomics of fish gut (PRJNA1254096)"
+authors:
+  - family-names: Sarirchi
+    given-names: Somayeh
+    orcid: https://orcid.org/0000-0000-0000-0000
+date-released: 2025-07-26
